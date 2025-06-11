@@ -9,15 +9,24 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap"
           rel="stylesheet"
         />
-        <script src="https://animatedicons.co/scripts/embed-animated-icons.js"></script>
-            <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"></link>
+
+        {/* Load stylesheets normally */}
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/kursor/dist/kursor.css"
+        />
       </Head>
       <body className="antialiased bg-black">
         <Main />
         <NextScript />
-      </body>
-          <script src="https://unpkg.com/kursor"></script>
 
+        {/* ✅ Move scripts to body & use defer to avoid blocking */}
+        <script
+          src="https://animatedicons.co/scripts/embed-animated-icons.js"
+          defer
+        ></script>
+        <script src="https://unpkg.com/kursor" defer></script>
+      </body>
     </Html>
   );
 }
