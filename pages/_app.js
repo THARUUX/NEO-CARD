@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex justify-between flex-col items-center bg-black text-white cursor-none">
+    <div className="w-screen min-h-screen flex justify-between flex-col items-center bg-black text-white cursor-none max-w-screen overflow-hidden">
       <Header />
       <div className="w-full max-w-[2000px] grow">
         <Component {...pageProps} />
