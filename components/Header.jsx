@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <div className="w-full py-10 px-20">
+        <div className="w-full py-10 px-10 sm:px-20">
             <div className="flex">
                 <a href="/" className="font-pri text-2xl" data-aos="fade-in">NEO Creative</a>
                 <div className="flex grow justify-end">
